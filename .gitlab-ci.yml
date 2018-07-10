@@ -21,6 +21,7 @@ build-package-push:
     - echo "REVISION=$REVISION"
     - >
       mvn -s .m2/settings.xml \
+          -DskipTests \
           --batch-mode \
           clean deploy \
           -Drevision=$REVISION \
